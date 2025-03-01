@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.2/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-header-m.png"
+      type="image/x-icon"
+    />
+    <title>Dev Board</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- Custom CSS -->
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .button-primary {
+        background-color: #2563eb;
+        color: #ffffff;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body class="font-poppin">
+    <main class="w-4/5 mx-auto py-4">
+      <!-- Navigation & Logo -->
+      <header
+        class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+      >
+        <section id="logo" class="flex items-center gap-2">
+          <img class="w-8" src="./assets/logo.png" alt="logo" />
+          <h2 class="text-2xl font-bold text-blue-900">
+            <span class="font-normal">Dev</span>Board
+          </h2>
+        </section>
+        <section id="nav" class="flex items-center gap-4">
+          <div
+            class="bg-blue-50 rounded-full py-2 px-4 flex items-center gap-2"
+          >
+            <img class="w-5" src="./assets/checkbox.png" alt="" /><span
+              id="task-completed-count"
+              class="font-semibold"
+              >23</span
+            >
+          </div>
+          <div id="theme-button" class="bg-blue-50 rounded-full p-2">
+            <img class="w-7" src="./assets/theme-btn.png" alt="" />
+          </div>
+        </section>
+      </header>
+      <section id="container" class="grid grid-cols-4 gap-4">
+        <!-- Main Content Here -->
+        <section
+          id="content-section"
+          class="col-span-3 mt-4 flex flex-col justify-between p-4 bg-white rounded-lg gap-8 shadow-sm"
+        >
+          <!-- Content Top Here -->
+          <section
+            id="content-header"
+            class="grid grid-cols-4 justify-between gap-4"
+          >
+            <div
+              class="card rounded-lg col-span-1 p-4 flex flex-col justify-center items-center gap-2"
+            >
+              <span class="font-semibold text-lg">Task Assigned</span>
+              <div
+                class="bg-white rounded-full py-2 px-6 flex items-center gap-2"
+              >
+                <img class="w-6" src="./assets/checkbox.png" alt="" /><span
+                  class="font-semibold text-2xl task-count"
+                ></span>
+              </div>
+            </div>
+            <div
+              id="discover-button"
+              class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-lg col-span-2 p-4 flex justify-center items-center gap-4 cursor-pointer hover:opacity-90"
+            >
+              <img src="assets/board.png" alt="" />
+              <h1 class="text-2xl font-semibold text-white">
+                Discover Something New Today !
+              </h1>
+            </div>
+            <div
+              class="card rounded-lg col-span-1 p-4 flex flex-col items-center justify-center gap-2"
+            >
+              <div
+                class="bg-white rounded-full py-2 px-4 flex items-center gap-3"
+              >
+                <img class="h-5" src="./assets/calender.png" alt="" /><span
+                  id="today-date"
+                  class="font-semibold"
+                  >28 Jul 2025</span
+                >
+              </div>
+              <span id="today-day" class="font-semibold text-xl"
+                >Wednesday</span
+              >
+            </div>
+          </section>
+          <section
+            id="content-main"
+            class="grid grid-cols-3 justify-between gap-6"
+          >
+            <!-- All Cards will be there -->
+          </section>
+        </section>
+        <!-- Side Content Here -->
+        <section
+          id="history-section"
+          class="col-span-1 mt-4 flex flex-col p-4 bg-white rounded-lg shadow-sm"
+        >
+          <section id="history-header" class="flex flex-col gap-6 m-2">
+            <div class="flex justify-center items-center gap-2">
+              <img src="./assets/activity.png" alt="" /><span class="text-xl"
+                >Activity Log</span
+              >
+            </div>
+            <button id="clear-history" class="btn" disabled>
+              Clear History
+            </button>
+          </section>
+          <!-- History Display Here -->
+          <section
+            id="history-main"
+            class="flex flex-col items-start gap-6 m-2"
+          ></section>
+        </section>
+      </section>
+    </main>
+    <script src="./scripts/task-cards.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/theme.js"></script>
+  </body>
+</html>
