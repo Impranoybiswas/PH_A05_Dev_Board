@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".task-card");
 
 const nowDate = new Date().toLocaleString("en-US", { dateStyle: "medium" });
 const todayDate = document.getElementById("today-date");
@@ -16,8 +16,8 @@ taskCountView.innerText = cardsCount;
 
 const taskCompleted = document.getElementById("task-completed-count");
 
-const cardButton = document.querySelectorAll(".card button");
-const cardTitle = document.querySelectorAll(".card h1");
+const cardButton = document.querySelectorAll(".task-card button");
+const cardTitle = document.querySelectorAll(".task-card h1");
 const historyView = document.getElementById("history-main");
 
 const historyButton = document.getElementById("clear-history");
@@ -43,13 +43,11 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 //for clear history
-if (historyView.innerHTML == "") {
+
   historyButton.addEventListener("click", () => {
     historyView.innerHTML = "";
-    cardButton.forEach((button) => {
-     taskCountView.innerText = cards.length < 10 ? "0" + cards.length : cards.length;
-    });
     historyButton.setAttribute("disabled", true);
+    alert("Full History cleared !");
   });
-}
+
 

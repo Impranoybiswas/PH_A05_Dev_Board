@@ -18,7 +18,7 @@ const colorThemes = [
   "#FF8484",
   "#44344F",
   "#FC9F5B",
-  "#2563EB"
+  "#2563EB",
 ];
 const colorThemesAlpha = [
   "#4DCCBD33",
@@ -27,7 +27,7 @@ const colorThemesAlpha = [
   "#FF848433",
   "#44344F33",
   "#FC9F5B33",
-  "#DBEAFB"
+  "#DBEAFB",
 ];
 
 let index = 0;
@@ -38,8 +38,13 @@ themeButton.addEventListener("click", () => {
     eachCard.style.backgroundColor = colorThemesAlpha[index];
   }
   for (button of allButton) {
-    button.style.backgroundColor = colorThemes[index];
+    button.classList.add(`bg-[${colorThemes[index]}]`);
   }
 
   index = (index + 1) % colorThemes.length;
 });
+
+
+// button.getAttribute("disabled") == "false"
+//       ? (button.style.backgroundColor = colorThemes[index])
+//       : (button.style.backgroundColor = "red");
